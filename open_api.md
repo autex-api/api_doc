@@ -10,7 +10,7 @@ API 请求在通过 internet 传输的过程中极有可能被篡改，为了确
 
 一个合法的请求由以下几部分组成：
 
-- 方法请求地址：即访问服务器地址 ex-admin.nxwise.io，比如  ex-admin.nxwise.io/api/order/orders。
+- 方法请求地址：即访问服务器地址 api.autex.io，比如  api.autex.io/api/order/orders。
 - API 访问密钥（AccessKeyId）：您申请的 API Key 中的 Access Key。
 - 签名值（Sign）：签名计算得出的值；计算签名的基于哈希的协议，此处使用 HmacSHA256。
 - 时间戳（Timestamp）：您发出请求的时间 (UTC 时间) 
@@ -18,7 +18,7 @@ API 请求在通过 internet 传输的过程中极有可能被篡改，为了确
 
 ### 创建 API Key
 
-您可以在 [这里 ]([https://ex-admin.nxwise.io](https://ex-admin.nxwise.io/))创建 API Key。
+您可以在 [这里 ]([https://api.autex.io](https://api.autex.io/))创建 API Key。
 
 API Key 包括以下两部分
 
@@ -31,7 +31,7 @@ API Key 包括以下两部分
 
 规范要计算签名的请求 因为使用 HMAC 进行签名计算时，使用不同内容计算得到的结果会完全不同。所以在进行签名计算前，请先对请求进行规范化处理。下面以查询某订单详情请求为例进行说明：
 
-获取某个订单详情 https://ex-admin.nxwise.io/api/order/order?AccessKeyId=8be4cb2d4dd45c9818358b5941750c269af5e4a3&order_code=sellmm2019100818260784463715&Timestamp=1570764868
+获取某个订单详情 https://api.autex.io/api/order/order?AccessKeyId=8be4cb2d4dd45c9818358b5941750c269af5e4a3&order_code=sellmm2019100818260784463715&Timestamp=1570764868
 
 **1、按照ASCII码的顺序对参数名进行升序排序。**
 
